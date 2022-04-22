@@ -1,4 +1,4 @@
 lua << EOF
-local Darkup = require("vscode")
+local Darkup = require("Darkup")
 Darkup.set()
 EOF
