@@ -31,12 +31,7 @@ Install via package manager
 
 ```lua
 -- Packer:
-use 'Mofiqul/vscode.nvim'
-```
-
-```vim
-" Vim-Plug:
-Plug 'Mofiqul/vscode.nvim'
+use 'VSNeoVim/Darkup.nvim'
 ```
 
 ## 🚀 Usage
@@ -44,31 +39,16 @@ Plug 'Mofiqul/vscode.nvim'
 ```lua
 -- Lua:
 -- For dark theme
-vim.g.vscode_style = "dark"
+vim.g.Darkup_style = "dark"
 -- For light theme
-vim.g.vscode_style = "light"
+vim.g.Darkup_style = "light"
 -- Enable transparent background
-vim.g.vscode_transparent = 1
+vim.g.Darkup_transparent = 1
 -- Enable italic comment
-vim.g.vscode_italic_comment = 1
+vim.g.Darkup_italic_comment = 1
 -- Disable nvim-tree background color
-vim.g.vscode_disable_nvimtree_bg = true
-vim.cmd([[colorscheme vscode]])
-```
-
-```vim
-" Vim-Script:
-" For dark theme
-let g:vscode_style = "dark"
-" For light theme
-let g:vscode_style = "light"
-" Enable transparent background
-let g:vscode_transparency = 1
-" Enable italic comment
-let g:vscode_italic_comment = 1
-" Disable nvim-tree background color
-let g:vscode_disable_nvimtree_bg = v:true
-colorscheme vscode
+vim.g.Darkup_disable_nvimtree_bg = true
+vim.cmd([[colorscheme Darkup]])
 ```
 
 If you are using [`lualine`](https://github.com/hoob3rt/lualine.nvim), you can also enable the provided theme:
@@ -85,83 +65,9 @@ require("lualine").setup({
 
 [nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua)  setup for exact match as screenshots
 
-```lua
-require("bufferline").setup({
-    options = {
-        buffer_close_icon = "",
-        close_command = "Bdelete %d",
-        close_icon = "",
-        indicator_icon = " ",
-        left_trunc_marker = "",
-        modified_icon = "●",
-        offsets = { { filetype = "NvimTree", text = "EXPLORER", text_align = "center" } },
-        right_mouse_command = "Bdelete! %d",
-        right_trunc_marker = "",
-        show_close_icon = false,
-        show_tab_indicators = true,
-    },
-    highlights = {
-        fill = {
-            guifg = { attribute = "fg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "StatusLineNC" },
-        },
-        background = {
-            guifg = { attribute = "fg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "StatusLine" },
-        },
-        buffer_visible = {
-            gui = "",
-            guifg = { attribute = "fg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "Normal" },
-        },
-        buffer_selected = {
-            gui = "",
-            guifg = { attribute = "fg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "Normal" },
-        },
-        separator = {
-            guifg = { attribute = "bg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "StatusLine" },
-        },
-        separator_selected = {
-            guifg = { attribute = "fg", highlight = "Special" },
-            guibg = { attribute = "bg", highlight = "Normal" },
-        },
-        separator_visible = {
-            guifg = { attribute = "fg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "StatusLineNC" },
-        },
-        close_button = {
-            guifg = { attribute = "fg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "StatusLine" },
-        },
-        close_button_selected = {
-            guifg = { attribute = "fg", highlight = "normal" },
-            guibg = { attribute = "bg", highlight = "normal" },
-        },
-        close_button_visible = {
-            guifg = { attribute = "fg", highlight = "normal" },
-            guibg = { attribute = "bg", highlight = "normal" },
-        },
-    },
-})
-```
-
 ## Switching theme
 
 ```
 :lua require('vscode').change_style("light")
 :lua require('vscode').change_style("dark")
 ```
-
-## 🍭 Extra folder
-
-- [Kitty](https://sw.kovidgoyal.net/kitty/) color scheme
-- [Alacritty](https://github.com/alacritty/alacritty) color scheme
-- [Xresources](https://wiki.debian.org/Xresources) color scheme
-- [galaxyline.nvim](https://github.com/glepnir/galaxyline.nvim) theme
-- [zathura](https://pwmt.org/projects/zathura/) color scheme
-
-## Something is broken but I know how to fix it!
-
-Pull requests are welcome! Feel free to send one with an explanation!
