@@ -458,10 +458,10 @@ theme.load_syntax = function()
         IndentBlanklineSpaceCharBlankline = { c.vscContext, nil, 'nocombine', nil },
 
         -- LSP
-        DiagnosticError = { c.vscRed, nil, 'none', nil },
-        DiagnosticWarn = { c.vscYellow, nil, 'none', nil },
-        DiagnosticInfo = { c.vscBlue, nil, 'none', nil },
-        DiagnosticHint = { c.vscBlue, nil, 'none', nil },
+        DiagnosticError = { '#db4b4b', nil, 'none', nil },
+        DiagnosticWarn = { '#e0af68', nil, 'none', nil },
+        DiagnosticInfo = { '#0db9d7', nil, 'none', nil },
+        DiagnosticHint = { '#10B981', nil, 'none', nil },
         DiagnosticUnderlineError = { nil, nil, 'undercurl', c.vscRed },
         DiagnosticUnderlineWarn = { nil, nil, 'undercurl', c.vscYellow },
         DiagnosticUnderlineInfo = { nil, nil, 'undercurl', c.vscBlue },
