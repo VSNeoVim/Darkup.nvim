@@ -428,8 +428,8 @@ theme.load_syntax = function()
         NvimTreeOpenedFolderName = { nil, no_nvimtree_bg and c.vscCursorDarkDark or c.vscLeftDark, 'none', nil },
 
         -- Bufferline
-        BufferLineIndicatorSelected = { c.vscLeftDark, nil, 'none', nil },
-        BufferLineFill = { nil, c.vscLeftDark, 'none', nil },
+        BufferLineIndicatorSelected = { "#18a2fe", nil, 'none', nil },
+        BufferLineFill = { nil, "#18a2fe", 'none', nil },
 
         -- BarBar
         BufferCurrent = { c.vscFront, c.vscTabCurrent, 'none', nil },
