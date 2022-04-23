@@ -429,7 +429,7 @@ theme.load_syntax = function()
 
         -- Bufferline
         BufferLineIndicatorSelected = { "#18a2fe", nil, 'none', nil },
-        BufferLineFill = { nil, "#18a2fe", 'none', nil },
+        BufferLineFill = { nil, c.vscLeftDark, 'none', nil },
 
         -- BarBar
         BufferCurrent = { c.vscFront, c.vscTabCurrent, 'none', nil },
